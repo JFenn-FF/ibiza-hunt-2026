@@ -332,7 +332,7 @@ export default function App() {
       const avatarId = state.avatars?.[team];
       const color = teamColors[team] || THEME.slate;
       const html = `<div style="background:${color};border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.4);font-size:18px">${avatarId ? "👤" : "📍"}</div>`;
-      const icon = L.divIcon({ html, iconSize:[36,36], className:"" });
+              const icon = L.divIcon({ html, iconSize:[40,40], iconAnchor:[20,20], className:"" });
       if (teamMarkers.current[team]) {
         teamMarkers.current[team].setLatLng([pos.lat, pos.lng]);
       } else {
@@ -490,7 +490,7 @@ export default function App() {
   // SPLASH SCREEN
   if (view === "splash") return (
     <div style={{position:"relative",height:"100vh",maxHeight:"100vh",background:"#1A3F66",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
-      <div style={{position:"absolute",top:0,left:0,width:"100%",height:"100%"}}>
+      <div style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",overflow:"hidden"}}>
         <svg width="100%" height="100%" viewBox="0 0 380 580" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <rect x="0" y="0" width="380" height="320" fill="#2B5F8E"/>
           <rect x="0" y="0" width="380" height="180" fill="#1A3F66"/>
