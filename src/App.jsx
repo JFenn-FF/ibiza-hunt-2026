@@ -490,9 +490,9 @@ export default function App() {
   // SPLASH SCREEN
   if (view === "splash") return (
     <div style={{position:"relative",height:"100vh",maxHeight:"100vh",background:`linear-gradient(180deg, #1A2530 0%, #3D5166 100%)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
-      <img src="https://i.ibb.co/FkpQsqGh/Dalt-Villa.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",opacity:0.6}}/>
+      <img src="https://i.ibb.co/FkpQsqGh/Dalt-Villa.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center center",opacity:0.75}}/>
+      <div style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",background:"linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%)"}}/>
       <div style={{position:"relative",textAlign:"center",padding:"0 24px"}}>
-        <div style={{fontSize:52,marginBottom:12}}>🏰</div>
         <h1 style={{fontSize:30,fontWeight:700,color:"white",margin:"0 0 8px",textShadow:"0 2px 8px rgba(0,0,0,0.5)"}}>Dalt Vila</h1>
         <h2 style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",margin:"0 0 4px",textShadow:"0 1px 4px rgba(0,0,0,0.5)"}}>Scavenger Hunt</h2>
         <p style={{fontSize:14,color:"rgba(255,255,255,0.65)",margin:"0 0 32px"}}>Ibiza · 2 hours · 13 challenges</p>
@@ -633,6 +633,7 @@ export default function App() {
     <div style={{background:THEME.sand,minHeight:"100vh",padding:"2rem 1.5rem",maxWidth:480,margin:"0 auto"}}>
       <SyncBadge/>
       <div style={{textAlign:"center",marginBottom:"2rem"}}>
+        <div style={{fontSize:52,marginBottom:10}}>🏰</div>
         <h1 style={{fontSize:26,fontWeight:700,margin:"0 0 4px",color:THEME.slate}}>Dalt Vila Scavenger Hunt</h1>
         <p style={{fontSize:14,color:THEME.textMid,margin:"0 0 2px"}}>Ibiza's ancient walled city</p>
         <p style={{fontSize:13,color:THEME.textLight,margin:0}}>{regular.length} challenges · {bonus.length} bonus · {totalPossible} pts · 2 hours</p>
@@ -645,20 +646,21 @@ export default function App() {
           const avatarId=state.avatars?.[t];
           return (
             <button key={t} onClick={()=>{ setActiveTeam(t); if(view==="map") return; setView(avatarId?"challenges":"avatarpick"); }}
-              style={{...S({padding:"14px 16px",background:THEME.white,textAlign:"left",display:"flex",alignItems:"center",gap:14})}}>
+              style={{...S({padding:"14px 16px",background:THEME.slate,textAlign:"left",display:"flex",alignItems:"center",gap:14})}}>
+
               <div style={{width:50,height:50,borderRadius:"50%",background:THEME.slateLight,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,overflow:"hidden"}}>
                 {avatarId ? <AvatarSVG id={avatarId} size={50}/> : <span style={{fontSize:22}}>👤</span>}
               </div>
               <div style={{flex:1,minWidth:0}}>
-                <div style={{fontWeight:600,fontSize:15,color:THEME.text}}>{t}</div>
-                <div style={{height:4,background:THEME.slateLight,borderRadius:4,marginTop:6,overflow:"hidden"}}>
-                  <div style={{height:"100%",width:`${pctDone}%`,background:col,borderRadius:4,transition:"width 0.5s ease"}}/>
+                <div style={{fontWeight:600,fontSize:15,color:"white"}}>{t}</div>
+                <div style={{height:4,background:"rgba(255,255,255,0.2)",borderRadius:4,marginTop:6,overflow:"hidden"}}>
+                  <div style={{height:"100%",width:`${pctDone}%`,background:THEME.orange,borderRadius:4,transition:"width 0.5s ease"}}/>
                 </div>
-                <div style={{fontSize:12,color:THEME.textLight,marginTop:4}}>{done}/{CHALLENGES.length} challenges</div>
+                <div style={{fontSize:12,color:"rgba(255,255,255,0.65)",marginTop:4}}>{done}/{CHALLENGES.length} challenges</div>
               </div>
               <div style={{textAlign:"right",flexShrink:0}}>
                 <div style={{fontWeight:700,fontSize:18,color:THEME.orange}}>{state.scores[t]}</div>
-                <div style={{fontSize:11,color:THEME.textLight}}>pts</div>
+                <div style={{fontSize:11,color:"rgba(255,255,255,0.65)"}}>pts</div>
               </div>
             </button>
           );
@@ -666,7 +668,7 @@ export default function App() {
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
         <button onClick={()=>setView("leaderboard")} style={{...S({padding:"12px",background:THEME.white,color:THEME.text,fontWeight:500})}}>🏆 Leaderboard</button>
-        <button onClick={()=>setView("admin")} style={{...S({padding:"12px",background:THEME.slate,color:"white",border:"none",fontWeight:500})}}>⚙️ Admin</button>
+        <button onClick={()=>setView("admin")} style={{...S({padding:"12px",background:THEME.white,color:THEME.text,fontWeight:500})}}>⚙️ Admin</button>
       </div>
       <button onClick={()=>{ setActiveTeam(null); setView("map"); }} style={{...S({width:"100%",padding:"12px",background:THEME.orange,color:"white",border:"none",fontWeight:600,marginBottom:10})}}>🗺️ Live Map</button>
       <button onClick={()=>setView("install")} style={{...S({width:"100%",padding:"11px",background:"none",color:THEME.textMid,fontSize:13})}}>📲 Add to home screen</button>
