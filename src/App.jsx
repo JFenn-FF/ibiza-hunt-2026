@@ -489,9 +489,86 @@ export default function App() {
 
   // SPLASH SCREEN
   if (view === "splash") return (
-    <div style={{position:"relative",height:"100vh",maxHeight:"100vh",background:`linear-gradient(180deg, #1A2530 0%, #3D5166 100%)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
-      <img src="https://i.ibb.co/FkpQsqGh/Dalt-Villa.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center center",opacity:0.75}}/>
-      <div style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",background:"linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%)"}}/>
+    <div style={{position:"relative",height:"100vh",maxHeight:"100vh",background:"#1A3F66",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
+      <div style={{position:"absolute",top:0,left:0,width:"100%",height:"100%"}}>
+        <svg width="100%" height="100%" viewBox="0 0 380 580" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="380" height="320" fill="#2B5F8E"/>
+          <rect x="0" y="0" width="380" height="180" fill="#1A3F66"/>
+          <rect x="0" y="120" width="380" height="80" fill="#3A7AB5" opacity="0.5"/>
+          <circle cx="280" cy="80" r="38" fill="#E8C840" opacity="0.9"/>
+          <circle cx="280" cy="80" r="28" fill="#F5E060"/>
+          <line x1="280" y1="28" x2="280" y2="14" stroke="#F5E060" strokeWidth="2" opacity="0.7"/>
+          <line x1="316" y1="44" x2="326" y2="34" stroke="#F5E060" strokeWidth="2" opacity="0.7"/>
+          <line x1="332" y1="80" x2="346" y2="80" stroke="#F5E060" strokeWidth="2" opacity="0.7"/>
+          <line x1="244" y1="44" x2="234" y2="34" stroke="#F5E060" strokeWidth="2" opacity="0.7"/>
+          <line x1="228" y1="80" x2="214" y2="80" stroke="#F5E060" strokeWidth="2" opacity="0.7"/>
+          <ellipse cx="80" cy="60" rx="40" ry="18" fill="white" opacity="0.15"/>
+          <ellipse cx="110" cy="52" rx="30" ry="15" fill="white" opacity="0.15"/>
+          <ellipse cx="190" cy="90" rx="35" ry="14" fill="white" opacity="0.1"/>
+          <rect x="0" y="290" width="380" height="50" fill="#1E6B8C"/>
+          <rect x="0" y="310" width="380" height="30" fill="#2580A8" opacity="0.7"/>
+          <line x1="20" y1="300" x2="60" y2="300" stroke="white" strokeWidth="1" opacity="0.2"/>
+          <line x1="80" y1="308" x2="130" y2="308" stroke="white" strokeWidth="1" opacity="0.2"/>
+          <line x1="240" y1="312" x2="290" y2="312" stroke="white" strokeWidth="1" opacity="0.2"/>
+          <path d="M300 306 Q320 302 340 306 L338 314 L302 314Z" fill="#E8C840" opacity="0.9"/>
+          <line x1="320" y1="302" x2="320" y2="292" stroke="#8B7355" strokeWidth="1.5"/>
+          <path d="M320 292 L332 298 L320 300Z" fill="white" opacity="0.8"/>
+          <path d="M0 280 Q80 240 190 230 Q280 222 380 240 L380 340 L0 340Z" fill="#5C7A3E"/>
+          <path d="M0 300 Q80 265 190 255 Q280 248 380 262 L380 340 L0 340Z" fill="#4A6630"/>
+          <rect x="60" y="160" width="30" height="50" fill="#C4A882"/>
+          <rect x="95" y="150" width="25" height="60" fill="#B89868"/>
+          <rect x="125" y="165" width="35" height="45" fill="#C4A882"/>
+          <rect x="165" y="155" width="28" height="55" fill="#B89868"/>
+          <rect x="200" y="162" width="32" height="48" fill="#C4A882"/>
+          <rect x="238" y="158" width="26" height="52" fill="#B89868"/>
+          <rect x="270" y="168" width="30" height="42" fill="#C4A882"/>
+          <rect x="68" y="168" width="7" height="9" fill="#6B5535" opacity="0.7"/>
+          <rect x="78" y="168" width="7" height="9" fill="#6B5535" opacity="0.7"/>
+          <rect x="133" y="174" width="8" height="10" fill="#6B5535" opacity="0.7"/>
+          <rect x="208" y="170" width="8" height="10" fill="#6B5535" opacity="0.7"/>
+          <rect x="150" y="100" width="50" height="100" fill="#C4A882"/>
+          <rect x="160" y="88" width="30" height="20" fill="#B89868"/>
+          <rect x="168" y="76" width="14" height="16" fill="#A88858"/>
+          <polygon points="175,50 164,78 186,78" fill="#8B7355"/>
+          <rect x="163" y="92" width="10" height="12" rx="5" fill="#6B5535" opacity="0.8"/>
+          <rect x="177" y="92" width="10" height="12" rx="5" fill="#6B5535" opacity="0.8"/>
+          <circle cx="175" cy="130" r="8" fill="#6B5535" opacity="0.6"/>
+          <rect x="0" y="200" width="380" height="100" fill="#9B8565"/>
+          <rect x="0" y="200" width="380" height="8" fill="#7A6448"/>
+          <rect x="0" y="188" width="22" height="16" fill="#9B8565"/><rect x="28" y="188" width="22" height="16" fill="#9B8565"/><rect x="56" y="188" width="22" height="16" fill="#9B8565"/><rect x="84" y="188" width="22" height="16" fill="#9B8565"/><rect x="112" y="188" width="22" height="16" fill="#9B8565"/><rect x="140" y="188" width="22" height="16" fill="#9B8565"/><rect x="168" y="188" width="22" height="16" fill="#9B8565"/><rect x="196" y="188" width="22" height="16" fill="#9B8565"/><rect x="224" y="188" width="22" height="16" fill="#9B8565"/><rect x="252" y="188" width="22" height="16" fill="#9B8565"/><rect x="280" y="188" width="22" height="16" fill="#9B8565"/><rect x="308" y="188" width="22" height="16" fill="#9B8565"/><rect x="336" y="188" width="22" height="16" fill="#9B8565"/>
+          <rect x="0" y="258" width="380" height="82" fill="#8B7555"/>
+          <rect x="0" y="258" width="380" height="6" fill="#6A5535"/>
+          <line x1="0" y1="272" x2="380" y2="272" stroke="#6A5535" strokeWidth="0.6" opacity="0.4"/>
+          <line x1="0" y1="288" x2="380" y2="288" stroke="#6A5535" strokeWidth="0.6" opacity="0.4"/>
+          <line x1="0" y1="304" x2="380" y2="304" stroke="#6A5535" strokeWidth="0.6" opacity="0.4"/>
+          <rect x="0" y="244" width="24" height="18" fill="#8B7555"/><rect x="30" y="244" width="24" height="18" fill="#8B7555"/><rect x="60" y="244" width="24" height="18" fill="#8B7555"/><rect x="90" y="244" width="24" height="18" fill="#8B7555"/><rect x="120" y="244" width="24" height="18" fill="#8B7555"/><rect x="150" y="244" width="24" height="18" fill="#8B7555"/><rect x="180" y="244" width="24" height="18" fill="#8B7555"/><rect x="210" y="244" width="24" height="18" fill="#8B7555"/><rect x="240" y="244" width="24" height="18" fill="#8B7555"/><rect x="270" y="244" width="24" height="18" fill="#8B7555"/><rect x="300" y="244" width="24" height="18" fill="#8B7555"/><rect x="330" y="244" width="24" height="18" fill="#8B7555"/><rect x="360" y="244" width="20" height="18" fill="#8B7555"/>
+          <rect x="28" y="248" width="95" height="12" rx="2" fill="#4A3A20"/>
+          <rect x="22" y="257" width="107" height="8" rx="2" fill="#3A2A18"/>
+          <circle cx="48" cy="268" r="14" fill="#2A1E10"/><circle cx="48" cy="268" r="9" fill="#1A1208"/><circle cx="48" cy="268" r="3.5" fill="#3A2A18"/>
+          <line x1="48" y1="254" x2="48" y2="282" stroke="#3A2A18" strokeWidth="2"/>
+          <line x1="34" y1="268" x2="62" y2="268" stroke="#3A2A18" strokeWidth="2"/>
+          <line x1="38" y1="258" x2="58" y2="278" stroke="#3A2A18" strokeWidth="2"/>
+          <line x1="58" y1="258" x2="38" y2="278" stroke="#3A2A18" strokeWidth="2"/>
+          <circle cx="100" cy="268" r="14" fill="#2A1E10"/><circle cx="100" cy="268" r="9" fill="#1A1208"/><circle cx="100" cy="268" r="3.5" fill="#3A2A18"/>
+          <line x1="100" y1="254" x2="100" y2="282" stroke="#3A2A18" strokeWidth="2"/>
+          <line x1="86" y1="268" x2="114" y2="268" stroke="#3A2A18" strokeWidth="2"/>
+          <line x1="90" y1="258" x2="110" y2="278" stroke="#3A2A18" strokeWidth="2"/>
+          <line x1="110" y1="258" x2="90" y2="278" stroke="#3A2A18" strokeWidth="2"/>
+          <path d="M30 248 Q45 242 190 249 Q205 250 216 254 Q205 259 190 260 Q45 262 30 257Z" fill="#3A2A18"/>
+          <ellipse cx="210" cy="254" rx="9" ry="6" fill="#1A0E08"/>
+          <ellipse cx="75" cy="253" rx="4" ry="7" fill="#2A1A0A" opacity="0.7"/>
+          <ellipse cx="120" cy="252" rx="4" ry="7" fill="#2A1A0A" opacity="0.7"/>
+          <ellipse cx="162" cy="252" rx="4" ry="7" fill="#2A1A0A" opacity="0.7"/>
+          <rect x="0" y="340" width="380" height="88" fill="#A09070"/>
+          <line x1="0" y1="354" x2="380" y2="354" stroke="#8A7858" strokeWidth="0.8" opacity="0.5"/>
+          <line x1="0" y1="368" x2="380" y2="368" stroke="#8A7858" strokeWidth="0.8" opacity="0.5"/>
+          <line x1="0" y1="382" x2="380" y2="382" stroke="#8A7858" strokeWidth="0.8" opacity="0.5"/>
+          <line x1="50" y1="340" x2="50" y2="428" stroke="#8A7858" strokeWidth="0.8" opacity="0.3"/>
+          <line x1="190" y1="340" x2="190" y2="428" stroke="#8A7858" strokeWidth="0.8" opacity="0.3"/>
+          <line x1="330" y1="340" x2="330" y2="428" stroke="#8A7858" strokeWidth="0.8" opacity="0.3"/>
+          <rect x="0" y="428" width="380" height="152" fill="#1A2530" opacity="0.95"/>
+        </svg>
+      </div>
       <div style={{position:"relative",textAlign:"center",padding:"0 24px"}}>
         <h1 style={{fontSize:30,fontWeight:700,color:"white",margin:"0 0 8px",textShadow:"0 2px 8px rgba(0,0,0,0.5)"}}>Dalt Vila</h1>
         <h2 style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",margin:"0 0 4px",textShadow:"0 1px 4px rgba(0,0,0,0.5)"}}>Scavenger Hunt</h2>
@@ -832,6 +909,7 @@ export default function App() {
             })}
           </div>
           <button onClick={()=>setView("winner")} style={{...S({width:"100%",padding:"12px",background:THEME.gold,color:"white",border:"none",fontWeight:600,marginBottom:10})}}>🏆 Show winner screen</button>
+          <button onClick={()=>updateState(s=>({...s,avatars:{}}))} style={{...S({width:"100%",padding:"11px",background:"none",color:THEME.slate,borderColor:THEME.slate,fontWeight:600,marginBottom:10})}}>👤 Reset all avatars</button>
           <button onClick={async()=>{ await fetch(`${WORKER_URL}/reset`,{method:"POST"}); await fetchState(); setAnswers({});setFeedback({});setPhotos({});setWarned30(false);setWarned10(false); }} style={{...S({width:"100%",padding:"11px",background:"none",color:THEME.orange,borderColor:THEME.orange,fontWeight:600})}}>Reset all progress</button>
         </div>
       )}
