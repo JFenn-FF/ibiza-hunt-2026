@@ -490,7 +490,7 @@ export default function App() {
   // SPLASH SCREEN
   if (view === "splash") return (
     <div style={{position:"relative",height:"100vh",minHeight:500,background:`linear-gradient(180deg, #1A2530 0%, #3D5166 100%)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Dalt_Vila_Ibiza_2014_001.jpg/1280px-Dalt_Vila_Ibiza_2014_001.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",opacity:0.5}}/>
+      <img src="https://i.ibb.co/FkpQsqGh/Dalt-Villa.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",opacity:0.6}}/>
       <div style={{position:"relative",textAlign:"center",padding:"0 24px"}}>
         <div style={{fontSize:52,marginBottom:12}}>🏰</div>
         <h1 style={{fontSize:30,fontWeight:700,color:"white",margin:"0 0 8px",textShadow:"0 2px 8px rgba(0,0,0,0.5)"}}>Dalt Vila</h1>
@@ -612,14 +612,18 @@ export default function App() {
       </div>
       <div ref={mapRef} style={{flex:1}}/>
       {!mapLoaded&&<div style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",color:THEME.slate,fontSize:14}}>Loading map...</div>}
-      <div style={{padding:"12px 16px",background:"white",borderTop:`1px solid ${THEME.slateLight}`}}>
-        <p style={{margin:0,fontSize:12,color:THEME.textLight,textAlign:"center"}}>
+      <div style={{padding:"10px 16px",background:"white",borderTop:`1px solid ${THEME.slateLight}`,overflowX:"auto"}}>
+        <div style={{display:"flex",gap:16,minWidth:"max-content",justifyContent:"center"}}>
           {TEAMS.map((t,i)=>{
             const av = AVATARS.find(a=>a.id===state.avatars?.[t]);
             const colors=[THEME.orange,THEME.success,THEME.gold];
-            return <span key={t} style={{marginRight:12,color:colors[i],fontWeight:600}}>● {av?.name||t.split(" ")[1]}</span>;
+            const hasPos = state.positions?.[t];
+            return <div key={t} style={{display:"flex",alignItems:"center",gap:6,flexShrink:0}}>
+              <div style={{width:10,height:10,borderRadius:"50%",background:colors[i],opacity:hasPos?1:0.3,flexShrink:0}}/>
+              <span style={{fontSize:12,color:THEME.text,fontWeight:600,whiteSpace:"nowrap"}}>{av?.name||t}</span>
+            </div>;
           })}
-        </p>
+        </div>
       </div>
     </div>
   );
@@ -641,7 +645,7 @@ export default function App() {
           const pctDone=Math.round((done/CHALLENGES.length)*100);
           const avatarId=state.avatars?.[t];
           return (
-            <button key={t} onClick={()=>{ setActiveTeam(t); setView(avatarId?"challenges":"avatarpick"); }}
+            <button key={t} onClick={()=>{ setActiveTeam(t); if(view==="map") return; setView(avatarId?"challenges":"avatarpick"); }}
               style={{...S({padding:"14px 16px",background:THEME.white,textAlign:"left",display:"flex",alignItems:"center",gap:14})}}>
               <div style={{width:50,height:50,borderRadius:"50%",background:THEME.slateLight,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,overflow:"hidden"}}>
                 {avatarId ? <AvatarSVG id={avatarId} size={50}/> : <span style={{fontSize:22}}>👤</span>}
