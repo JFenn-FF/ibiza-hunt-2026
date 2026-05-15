@@ -489,8 +489,8 @@ export default function App() {
 
   // SPLASH SCREEN
   if (view === "splash") return (
-    <div style={{position:"relative",height:"100vh",minHeight:500,background:`linear-gradient(180deg, #1A2530 0%, #3D5166 100%)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
-      <img src="https://i.ibb.co/FkpQsqGh/Dalt-Villa.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",opacity:0.6}}/>
+    <div style={{position:"relative",height:"100vh",maxHeight:"100vh",background:`linear-gradient(180deg, #1A2530 0%, #3D5166 100%)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"flex-end",padding:"0 0 60px",overflow:"hidden"}}>
+      <img src="https://i.ibb.co/FkpQsqGh/Dalt-Villa.jpg" alt="Dalt Vila" style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",opacity:0.6}}/>
       <div style={{position:"relative",textAlign:"center",padding:"0 24px"}}>
         <div style={{fontSize:52,marginBottom:12}}>🏰</div>
         <h1 style={{fontSize:30,fontWeight:700,color:"white",margin:"0 0 8px",textShadow:"0 2px 8px rgba(0,0,0,0.5)"}}>Dalt Vila</h1>
@@ -633,7 +633,6 @@ export default function App() {
     <div style={{background:THEME.sand,minHeight:"100vh",padding:"2rem 1.5rem",maxWidth:480,margin:"0 auto"}}>
       <SyncBadge/>
       <div style={{textAlign:"center",marginBottom:"2rem"}}>
-        <div style={{fontSize:52,marginBottom:10}}>🏰</div>
         <h1 style={{fontSize:26,fontWeight:700,margin:"0 0 4px",color:THEME.slate}}>Dalt Vila Scavenger Hunt</h1>
         <p style={{fontSize:14,color:THEME.textMid,margin:"0 0 2px"}}>Ibiza's ancient walled city</p>
         <p style={{fontSize:13,color:THEME.textLight,margin:0}}>{regular.length} challenges · {bonus.length} bonus · {totalPossible} pts · 2 hours</p>
